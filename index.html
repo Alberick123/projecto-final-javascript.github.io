@@ -14,56 +14,60 @@
     <title>Inicio</title>
 </head>
 <body>
-    <div class="contenedor">
-    <section class="logo">
-        <img src="imagenes/logo argentina open.png" alt="Logo del torneo">
-        <h1>Buenos Aires Open 2022</h1>
+    <div class="container-fluid">
+    <section class="row logo">
+        <img src="imagenes/logo argentina open.png" alt="Logo del torneo" class="col-lg-2 col-md-3 col-xs-5">
+        <h1 class="col-lg-4 col-md-6 col-xs-8">Buenos Aires Open 2022</h1>
     </section>
-    <header class="navbar">
-        <h2 class="navbar__titulo">Menu</h2>
-        <nav>
-            <ul class="navbar__lista">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="./paginas/jugadores.html">Jugadores</a></li>
-                <li><a href="./paginas/programacion.html">Programacion</a></li>
-                <li><a href="./paginas/tickets.html">Tickets</a></li>
-                <li><a href="./paginas/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar navbar-lg navbar-expand-xl navbar-dark bg-dark row">
+        <div class="container-fluid">
+        <a class="navbar-brand navbar__titulo col-lg-8">Menu</a> 
+        <div class="collapse navbar-collapse show" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                <a class="nav-link" href="./paginas/jugadores.html">Jugadores</a>
+                <a class="nav-link" href="./paginas/programacion.html">Programacion</a>
+                <a class="nav-link" href="./paginas/tickets.html">Tickets</a>
+                <a class="nav-link" href="./paginas/contacto.html">Contacto</a>
+            </div>
+            </div>
+        </div>
+    </nav>
 
-
-    <section class="noticias">
-        <h3>Noticias</h3>
+    <section class="noticias row">
+        <h3 class="col-lg-12">Noticias</h3>
 
         <div class="noticias__cuerpo">
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti at itaque excepturi. Temporibus necessitatibus iste hic dolor distinctio. Ducimus provident nobis consectetur eligendi expedita quis illum corporis animi dolore voluptas? Expedita in libero, velit harum dicta omnis fugiat.</p>
+        <p class="col-lg-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti at itaque excepturi. Temporibus necessitatibus iste hic dolor distinctio. Ducimus provident nobis consectetur eligendi expedita quis illum corporis animi dolore voluptas? Expedita in libero, velit harum dicta omnis fugiat.</p>
 
         <iframe src="https://www.youtube.com/embed/RKSorKXwjSY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         </div>
     </section>
 
-    <section class="sponsors">
-        <img src="imagenes/tennium.png" alt="Tennium">
-        <img src="imagenes/Axion.png" alt="Axion">
-        <img src="imagenes/bodegas_navarro.png" alt="Bodegas Navarro">
-        <img src="imagenes/Fila.png" alt="Fila">
-        <img src="imagenes/Motorola_ok.png" alt="Motorola">
-        <img src="imagenes/TyC.png" alt="Tyc Sports">
-        <img src="imagenes/Wilson.png" alt="Wilson">
-        <img src="imagenes/CORREO-ARGENTINO-2021.png" alt="Correo Argentino">
+    <section class="sponsors row">
+        <img src="imagenes/tennium.png" alt="Tennium" class="col-lg-3 col-xs-1">
+        <img src="imagenes/Axion.png" alt="Axion" class="col-lg-3 col-xs-1">
+        <img src="imagenes/bodegas_navarro.png" alt="Bodegas Navarro" class="col-lg-3 col-xs-1">
+        <img src="imagenes/Fila.png" alt="Fila" class="col-lg-3 col-xs-1">
+        <img src="imagenes/Motorola_ok.png" alt="Motorola" class="col-lg-3 col-xs-1">
+        <img src="imagenes/TyC.png" alt="Tyc Sports" class="col-lg-3 col-xs-1">
+        <img src="imagenes/Wilson.png" alt="Wilson" class="col-lg-3 col-xs-1">
+        <img src="imagenes/CORREO-ARGENTINO-2021.png" alt="Correo Argentino" class="col-lg-3 col-xs-1">
 
     </section>
 
 
-    <footer class="footer">
+    <footer class="footer row">
+        <div class="col-lg-12">
 
     
         <a href="#"><img src="imagenes/logo_facebook.png" class="footer_facebook" alt="Facebook"></a>
         <a href="#"><img src="imagenes/logo_twitter.png" class="footer_twitter" alt="Twitter"></a>
         <a href="#"><img src="imagenes/logo_instagram.png" class="footer_instagram" alt="Instagram"></a>
+
+        </div>
     
     </footer>
     </div>
