@@ -13,30 +13,32 @@
     <title>Contacto</title>
 </head>
 <body>
-    <div class="contenedor_contacto">
-    <section class="logo">
-        <img src="../imagenes/logo argentina open.png" alt="Logo del torneo">
-        <h1>Buenos Aires Open 2022</h1>
-    </section>
-    <header class="navbar">
-        <h2 class="navbar__titulo">Contacto</h2>
-        <nav>
-            <ul class="navbar__lista">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="jugadores.html">Jugadores</a></li>
-                <li><a href="programacion.html">Programacion</a></li>
-                <li><a href="tickets.html">Tickets</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+    <div class="container-fluid"> 
+        <section class="row logo">
+            <img src="../imagenes/logo argentina open.png" alt="Logo del torneo" class="col-lg-2 col-md-3">
+            <h1 class="col-lg-4 col-md-6">Buenos Aires Open 2022</h1>
+        </section>
+        <nav class="navbar navbar-lg navbar-expand-xl navbar-dark bg-dark row">
+            <div class="container-fluid">
+            <a class="navbar-brand navbar__titulo col-8">Contacto</a> 
+            <div class="collapse navbar-collapse show" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                    <a class="nav-link" href="jugadores.html">Jugadores</a>
+                    <a class="nav-link" href="programacion.html">Programacion</a>
+                    <a class="nav-link" href="tickets.html">Tickets</a>
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </div>
+                </div>
+            </div>
         </nav>
-    </header>
 
-    <div class="contacto__cuerpo">
+    <div class="contacto__cuerpo row">
     <section class="contacto__titulo">
         <h3>Contacto</h3>
     </section>
 
-    <main class="main__contacto">
+    <main class="main__contacto col-lg-12">
         <section>
             <img src="../imagenes/informacion general.jpg" alt="informacion en general" class="imagen__general">
         </section>
@@ -68,25 +70,28 @@
         
     </main>
 
-    <section class="sponsors">
-        <img src="../imagenes/tennium.png" alt="Tennium">
-        <img src="../imagenes/Axion.png" alt="Axion">
-        <img src="../imagenes/bodegas_navarro.png" alt="Bodegas Navarro">
-        <img src="../imagenes/Fila.png" alt="Fila">
-        <img src="../imagenes/Motorola_ok.png" alt="Motorola">
-        <img src="../imagenes/TyC.png" alt="Tyc Sports">
-        <img src="../imagenes/Wilson.png" alt="Wilson">
-        <img src="../imagenes/CORREO-ARGENTINO-2021.png" alt="Correo Argentino">
+    <section class="sponsors row">
+        <img src="../imagenes/tennium.png" alt="Tennium" class="col-3">
+        <img src="../imagenes/Axion.png" alt="Axion" class="col-3">
+        <img src="../imagenes/bodegas_navarro.png" alt="Bodegas Navarro" class="col-3">
+        <img src="../imagenes/Fila.png" alt="Fila" class="col-3">
+        <img src="../imagenes/Motorola_ok.png" alt="Motorola" class="col-3">
+        <img src="../imagenes/TyC.png" alt="Tyc Sports" class="col-3">
+        <img src="../imagenes/Wilson.png" alt="Wilson" class="col-3">
+        <img src="../imagenes/CORREO-ARGENTINO-2021.png" alt="Correo Argentino" class="col-3">
 
     </section>
 
 
-    <footer class="footer">
+    <footer class="footer row">
+        <div class="col-12">
 
     
         <a href="#"><img src="../imagenes/logo_facebook.png" class="footer_facebook" alt="Facebook"></a>
         <a href="#"><img src="../imagenes/logo_twitter.png" class="footer_twitter" alt="Twitter"></a>
         <a href="#"><img src="../imagenes/logo_instagram.png" class="footer_instagram" alt="Instagram"></a>
+
+        </div>
     
     </footer>
     </div>
