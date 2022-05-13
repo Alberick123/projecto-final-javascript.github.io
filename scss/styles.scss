@@ -1,57 +1,56 @@
+@import "variables";
+
 *{
     padding: 0;
     margin: 0;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+$estilos: (
+centro: center,
+tFuente: 30px,
+paddingSponsors: 5px,
+);
+
+
+@mixin tamaño($height, $width) {
+    height: $height;
+    width: $width;
+} 
+
 .logo{
-    background-color: rgb(53, 53, 122);
+    background-color: $colorLogo;
     height: 181px;
     font-size: 40px;
     display: flex;
     justify-content: flex-start;
-}
-
-.logo img:hover{
-    transform: scale(0.8,0.8);
-}
-
-.logo h1{
-    margin: 10px;
-    align-self: center;
-}
-
-.navbar{
-    background-color: rgb(24, 24, 43);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: auto;
+    img{
+        &:hover{
+            transform: scale(0.8,0.8);
+        }
+    }
+    h1{
+        margin: 10px;
+        align-self: map-get($estilos, centro);
+    }
 }
 
 .navbar__titulo{
-    color: rgb(36, 240, 36);
-    font-size: 30px;
-}
-
-.navbar a{
-    text-decoration: none;
-    color: aqua;
-}
-
-.navbar__lista{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    list-style: none;
-    width: 350px;
-    height: 40px;
+    font-size: map-get($estilos, tFuente);
 }
 
 .noticias{
-    background-color: brown;
+    background-color: $colorPrincipal;
     height: auto;
+    h3{
+    font-size: map-get($estilos, tFuente);
+    text-align: map-get($estilos, centro);
+    text-decoration: underline;
+    animation-name: desplazarse_3;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    }
 }
 
 .noticias__cuerpo{
@@ -59,34 +58,21 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     margin-top: 20px;
-}
-
-.noticias__cuerpo iframe{
-    width: 1000px;
-    height: 300px;
+    iframe{
+    @include tamaño(300px,1000px);
     margin-left: 20px;
     margin-bottom: 20px;
-}
-
-.noticias__cuerpo p{
+    }
+    p{
     display: flex;
-    align-self: center;
+    align-self: map-get($estilos, centro);
     margin-right: 30px;
     margin-left: 30px;
-}
-
-.noticias h3{
-    font-size: 30px;
-    text-align: center;
-    text-decoration: underline;
-    animation-name: desplazarse_3;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    }
 }
 
 .footer{
-    background-color: rgb(47, 109, 224);
+    background-color: $colorFooter;
     height: 150px;
     display: flex;
     flex-direction: row;
@@ -94,20 +80,23 @@
     align-items: flex-end;
 }
 
-.footer_facebook{
+.footer_iconos{
     height: 70px;
+    margin-left: 15px;
+}
+
+.footer_facebook{
+    @extend .footer_iconos;
     margin-bottom: 5px;
 }
 
 .footer_twitter{
-    height: 70px;
-    margin-left: 15px;
+    @extend .footer_iconos;
     margin-bottom: 5px;
 }
 
 .footer_instagram{
-    height: 70px;
-    margin-left: 15px;
+    @extend .footer_iconos;
 }
 
 @keyframes desplazarse {
@@ -122,17 +111,7 @@
     }
 }
 
-@keyframes desplazarse_2 {
-    10% {
-        transform: translateY(-10px)
-    }
-    50%{
-        transform:translateY(-50px)
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
+
 
 @keyframes desplazarse_3 {
     10% {
@@ -165,9 +144,7 @@
     100%{ height: 500px;}
 }
 
-
-
-.ruud{
+.jugadores_marron{
     width: 300px;
     height: 500px;
     background-color: brown;
@@ -177,91 +154,43 @@
     animation-iteration-count: initial;
     animation-timing-function: linear;
     animation-duration: 4s;
-    
 }
 
-.schwartzman{
-    width: 300px;
-    height: 500px;
+.jugadores_azul{
+    @extend .jugadores_marron;
     background-color: blue;
-    border-radius: 100px;
-    margin-bottom: 5px;
-    animation-name: alargar;
-    animation-iteration-count: initial;
-    animation-timing-function: linear;
-    animation-duration: 4s;
+}
+
+.ruud{
+    @extend .jugadores_marron;
 }
 
 .sonego{
-    width: 300px;
-    height: 500px;
-    background-color: brown;
-    border-radius: 100px;
-    margin-bottom: 5px;
-    animation-name: alargar;
-    animation-iteration-count: initial;
-    animation-timing-function: linear;
-    animation-duration: 4s;
-}
-
-.fognini{
-    width: 300px;
-    height: 500px;
-    background-color: blue;
-    border-radius: 100px;
-    margin-bottom: 5px;
-    animation-name: alargar;
-    animation-iteration-count: initial;
-    animation-timing-function: linear;
-    animation-duration: 4s;
+    @extend .jugadores_marron;
 }
 
 .djere{
-    width: 300px;
-    height: 500px;
-    background-color: brown;
-    border-radius: 100px;
-    margin-bottom: 5px;
-    animation-name: alargar;
-    animation-iteration-count: initial;
-    animation-timing-function: linear;
-    animation-duration: 4s;
-}
-
-.paire{
-    width: 300px;
-    height: 500px;
-    background-color: blue;
-    border-radius: 100px;
-    margin-bottom: 5px;
-    animation-name: alargar;
-    animation-iteration-count: initial;
-    animation-timing-function: linear;
-    animation-duration: 4s;
+    @extend .jugadores_marron;
 }
 
 .andujar{
-    width: 300px;
-    height: 500px;
-    background-color: brown;
-    border-radius: 100px;
-    margin-bottom: 5px;
-    animation-name: alargar;
-    animation-iteration-count: initial;
-    animation-timing-function: linear;
-    animation-duration: 4s;
+    @extend .jugadores_marron;
+}
+
+.schwartzman{
+    @extend .jugadores_azul;
+}
+
+.fognini{
+    @extend .jugadores_azul;
+}
+
+.paire{
+    @extend .jugadores_azul;
 }
 
 .verdasco{
-    width: 300px;
-    height: 500px;
-    background-color: blue;
-    border-radius: 100px;
-    margin-bottom: 5px;
-    animation-name: alargar;
-    animation-iteration-count: initial;
-    animation-timing-function: linear;
-    animation-duration: 4s;
+    @extend .jugadores_azul;
 }
 
 .lista_jugadores{
@@ -273,49 +202,48 @@
     padding-bottom: 10px;
 }
 
-.jugadores__titulo{
+.titulos{
     background-color: aqua;
     text-decoration: underline;
     text-align: center;
     font-size: 20px;
-    height: 30px;
-    padding-top: 8px;
-    padding-bottom: 45px;
+}
+
+.jugadores__titulo{
+    @extend .titulos;
 }
 
 .programacion__titulo{
-    background-color: aqua;
-    text-decoration: underline;
-    text-align: center;
-    font-size: 20px;
+    @extend .titulos;
 }
 
 .tickets__titulo{
-    background-color: aqua;
-    text-decoration: underline;
-    text-align: center;
-    font-size: 20px;
-    height: 30px;
+    @extend .titulos;
+}
+
+.contacto__titulo{
+    @extend .titulos;
 }
 
 .tickets__texto{
     background-color: aqua;
     font-weight: bold;
-}
-
-.tickets__texto p{
-    text-decoration: bold;
+    p{
+        text-decoration: bold;
+    }
 }
 
 table, th, td{
     border: 2px solid;
     background-color: brown;
+    
 }
 
 .main__programacion{
     height: 700x;
     background-color: brown;
 }
+
 
 .main__programacion table{
     width: 100%;
@@ -338,31 +266,19 @@ table, th, td{
     justify-content: space-around;
     align-items: center;
     height: 600px;
-}
-
-.main__tickets table{
-
-    width: 60%;
-    border-collapse: collapse;
-    background-position: 5px;
-    text-align: center;
-    border: 1px solid;
-    border-bottom: 2px solid;
-    
+    table{
+        width: 60%;
+        border-collapse: collapse;
+        background-position: 5px;
+        text-align: center;
+        border: 1px solid;
+        border-bottom: 2px solid;
+    }
 }
 
 .imagen__tickets img{
     width: 275px;
     align-self: center;
-}
-
-.contacto__titulo{
-    background-color: aqua;
-    text-decoration: underline;
-    text-align: center;
-    font-size: 20px;
-    height: 30px;
-    padding-bottom: 35px;
 }
 
 .main__contacto{
@@ -389,7 +305,6 @@ table, th, td{
 .imagen__prensa{
     width: 500px;
     margin-bottom: 10px;
-    
 }
 
 .imagen__corporativo{
@@ -401,11 +316,9 @@ table, th, td{
     margin-bottom: 20px;
 }
 
-
 .sponsors{
-    grid-area: sponsors;
     background-color:  white;
-    padding: 5px;
+    padding: map-get($estilos, paddingSponsors);
     height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -413,16 +326,12 @@ table, th, td{
     
 }
 
-
-@media screen and (max-width: 768px){   
-    
-
+@media screen and (max-width: 768px){
     .sponsors{
         height: 300px;
-    }
-
-    .sponsors img{
-        width: 188px;
+        img{
+            width: 188px;
+        }
     }
 
     .logo{
@@ -430,8 +339,7 @@ table, th, td{
     }
 
     .noticias__cuerpo iframe{
-        width: 2000px;
-        height: 300px;
+        @include tamaño(300px,2000px);
         margin-left: 20px;
         margin-bottom: 20px;
     }
@@ -439,10 +347,9 @@ table, th, td{
     .main__tickets{
         height: auto;
         padding-top: 10px;
-    }
-    
-    .main__tickets table{
-        height: 200px;
+        table{
+            height: 200px;
+        }
     }
 
     .footer_twitter{
@@ -456,14 +363,11 @@ table, th, td{
     .footer_facebook{
         height: 60px;
     }
-
 }
 
 @media screen and (max-width: 375px){
-    
-    .logo img{
-        height: 120px;
-        width: 130px;
+    .sponsors{
+        height: 1000px;
     }
 
     .footer{
@@ -472,39 +376,25 @@ table, th, td{
 
     .footer_twitter{
         height: 35px;
+        margin-left: -0.5px;
     }
     
     .footer_instagram{
         height: 35px;
+        margin-left: -1px;
     }
 
     .footer_facebook{
         height: 35px;
-    }
-
-    .sponsors{
-
-        height: 1000px;
-    }
-
-
-    .navbar{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        margin-left: -5px;
     }
     
+    
+
     .navbar__titulo{
-        font-size: 25px;
+        font-size: 20px;
     }
-    
-    .navbar__lista{
-        width: 250px;
-        height: 40px;
-        font-size: 12px;
-    }
-    
+
     .noticias{
         height: auto;
     }
@@ -515,24 +405,18 @@ table, th, td{
         justify-content: space-between;
         margin-top: 20px;
         margin-bottom: 15px;
+        iframe{
+            @include tamaño(200px,250px);
+            align-self: map-get($estilos, centro);
+            margin-bottom: 10px;
+        }
+        p{
+            @include tamaño(170px,250px);
+            align-self: map-get($estilos, centro);
+            margin-left: 50px;
+        }
     }
-    
-    .noticias__cuerpo iframe{
-        width: 250px;
-        height: 200px;
-        align-self: center;
-        margin-bottom: 10px;
-    }
-    
-    .noticias__cuerpo p{
-        width: 250px;
-        height: 170px;
-        align-self: center;
-        margin-left: 50px;
-    }
-    .navbar__titulo{
-        font-size: 20px;
-    }
+
     .programacion__titulo img{
         width: 300px;
     }
@@ -547,6 +431,11 @@ table, th, td{
         width: 380px;
         height: 750px;
         align-items: center;
+        table{
+            transform: scale(0.6,0.6) translate(-120px,0px);
+            height: 100px;
+            width: 200px;
+        }
     }
 
     .imagen__tickets img{
@@ -554,26 +443,18 @@ table, th, td{
         width: 150px;
         transform: translateY(-160px);
     }
-
-    .main__tickets table{
-        height: 100px;
-        width: 200px;
-        transform: scale(0.6,0.6) translate(-120px,0px);
-    }
-
     .tickets__titulo{
         font-size: 15px;
     }
     
     .tickets__texto{
         font-size: 10px;
+        button{
+            transform: scale(0.8,0.8);
+            margin-left: -4px;
+        }
     }
-
-    .tickets__texto button{
-        transform: scale(0.8,0.8);
-        margin-left: -4px;
-    }
-
+    
     .titulo_formulario{
         text-decoration: underline;
         margin-bottom: 5px;
@@ -595,8 +476,14 @@ table, th, td{
         width: 300px;
         margin-bottom: -2px;
     }
+
     .main__contacto{
         width: 1250px;
         height: 900px;
-    }    
+    }
+
+    .logo img{
+        height: 120px;
+        width: 130px;
+    }
 }
