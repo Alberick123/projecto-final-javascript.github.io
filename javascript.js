@@ -2,7 +2,7 @@
 
 solicitarEdad()
 
-let nombre = prompt("Nombre:");
+/*let nombre = prompt("Nombre:");
 let apellido = prompt("Apellido:");
 let email = prompt("Email:");
 let consulta = prompt("Consulta:");
@@ -21,7 +21,7 @@ if (email === ""){
 
 if (consulta === ""){
     alert("Por favor, ingrese su consulta")
-}
+}*/
 
 
 function solicitarEdad(){
@@ -34,6 +34,10 @@ while (edad < 18){
 }
 }
 
+let nombre;
+let apellido;
+let email;
+let consulta;
 
 const listaConsultas = [];
 
@@ -46,10 +50,19 @@ class Consultas{
     }
 }
 
-const consultas1 = new Consultas(nombre, apellido, email, consulta);
+let formulario = document.getElementById("formulario");
 
-listaConsultas.push(consultas1);
+formulario.addEventListener("submit", validarFormulario);
 
-for (const i of listaConsultas) {
+function validarFormulario(e){
+    e.preventDefault();
+    nombre = document.getElementById("nombre").value;
+    apellido = document.getElementById("apellido").value;
+    email = document.getElementById("email").value;
+    consulta = document.getElementById("consulta").value;
+    alert("Su consulta ha sido enviada");
+    console.log("Formulario Enviado");
+    const consultas1 = new Consultas(nombre, apellido, email, consulta);
+    listaConsultas.push(consultas1);
     console.log(listaConsultas)
 }
