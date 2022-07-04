@@ -4,9 +4,6 @@ let nombre;
 let apellido;
 let email;
 let consulta;
-let edad;
-
-solicitarEdad()
 
 /*let nombre = prompt("Nombre:");
 let apellido = prompt("Apellido:");
@@ -27,7 +24,11 @@ if (email === ""){
 
 if (consulta === ""){
     alert("Por favor, ingrese su consulta")
-}*/
+}
+
+let edad;
+
+solicitarEdad()
 
 function solicitarEdad(){
     edad = prompt("Por favor, ingrese su edad")
@@ -38,12 +39,13 @@ while (edad < 18){
 }
 }
 
-
 localStorage.setItem("edadStorage", edad)
 
 edad = JSON.parse(localStorage.getItem("edadStorage"))
 
 console.log(typeof(edad))
+
+*/
 
 
 const listaConsultas = [];
@@ -67,7 +69,6 @@ function validarFormulario(e){
     apellido = document.getElementById("apellido").value;
     email = document.getElementById("email").value;
     consulta = document.getElementById("consulta").value;
-    alert("Su consulta ha sido enviada");
     console.log("Formulario Enviado");
     const consultas1 = new Consultas(nombre, apellido, email, consulta);
     listaConsultas.push(consultas1);

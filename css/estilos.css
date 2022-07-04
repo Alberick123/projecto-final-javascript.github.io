@@ -4,6 +4,25 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+.labelIndex{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: 200px;
+    font-size: 20px;
+    text-decoration: underline solid;
+    margin-left: 100px;
+}
+
+.inputIndex{
+    height: 20px;
+    width: 200px;
+    display: flex;
+    align-self: center;
+    margin-left: -30px;
+    font-size: 18px;
+}
+
 .logo{
     background-color: rgb(53, 53, 122);
     height: 181px;
