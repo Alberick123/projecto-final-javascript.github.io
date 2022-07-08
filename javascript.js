@@ -5,26 +5,31 @@ let apellido;
 let email;
 let consulta;
 
-/*let nombre = prompt("Nombre:");
-let apellido = prompt("Apellido:");
-let email = prompt("Email:");
-let consulta = prompt("Consulta:");
+alertaEdad()
 
-if (nombre === ""){
-    alert("Por favor, ingrese su nombre")
-}
+function alertaEdad() {swal({
+    title: "Eres mayor de edad?",
+    text: "Solo las personas mayores de 18 años estan autorizados a entrar en esta página",
+    icon: "warning",
+    buttons: ["Soy menor de edad", "Tengo más de 18 años"],
+    closeOnClickOutside: false,
+    closeOnEsc: false,
+  })
+  .then((respuesta) => {
+    if (respuesta) {
+      swal("Estas autorizado a entrar a esta página", {
+        icon: "success",
+      });
+    } else {
+      swal("Por favor, cierre la página", {
+        icon: "error",
+      });
+    }
+  });}
 
-if (apellido === ""){
-    alert("Por favor, ingrese su apellido")
-}
 
-if (email === ""){
-    alert("Por favor, ingrese su email")
-}
 
-if (consulta === ""){
-    alert("Por favor, ingrese su consulta")
-}
+/*
 
 let edad;
 
@@ -70,6 +75,12 @@ function validarFormulario(e){
     email = document.getElementById("email").value;
     consulta = document.getElementById("consulta").value;
     console.log("Formulario Enviado");
+    Toastify({
+      text: "Su consulta ha sido enviada correctamente!",
+      duration: 2500,
+      gravity: 'top',
+      position: 'right'
+  }).showToast();
     const consultas1 = new Consultas(nombre, apellido, email, consulta);
     listaConsultas.push(consultas1);
     console.log(listaConsultas)
