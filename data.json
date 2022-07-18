@@ -1,0 +1,11 @@
+[
+    {"dia": "Sábado 10 (clasificación)", "horaDeInicio": "13:00 hs", "platea": "---" , "palcoSur": "---" , "palcoNorte": "---" , "palcoLateralA": "---" , "palcoLateralB": "---"},
+    {"dia": "Domingo 11 (clasificación)", "horaDeInicio": "13:00 hs", "platea": "---" , "palcoSur": "---" , "palcoNorte": "---" , "palcoLateralA": "---" , "palcoLateralB": "---"},
+    {"dia": "Lunes 12 (Primera Ronda)", "horaDeInicio": "13:00 hs", "platea": "$750" , "palcoSur": "$900" , "palcoNorte": "$900" , "palcoLateralA": "$1100" , "palcoLateralB": "$1100"},
+    {"dia": "Martes 13 (Primera Ronda)", "horaDeInicio": "13:00 hs", "platea": "$750" , "palcoSur": "$900" , "palcoNorte": "$900" , "palcoLateralA": "$1100" , "palcoLateralB": "$1100"},
+    {"dia": "Miercoles 14 (Octavos de Final)", "horaDeInicio": "13:00 hs", "platea": "$900" , "palcoSur": "$1100" , "palcoNorte": "$1100" , "palcoLateralA": "$1350" , "palcoLateralB": "$1350"},
+    {"dia": "Jueves 15 (Octavos de Final)", "horaDeInicio": "13:00 hs", "platea": "$1000" , "palcoSur": "$1200" , "palcoNorte": "$1200" , "palcoLateralA": "$1550" , "palcoLateralB": "$1550"},
+    {"dia": "Viernes 16 (Cuartos de Final)", "horaDeInicio": "13:00 hs", "platea": "1200" , "palcoSur": "$1500" , "palcoNorte": "$1500" , "palcoLateralA": "$1900" , "palcoLateralB": "$1900"},
+    {"dia": "Sábado 17 (Seminifales)", "horaDeInicio": "13:00 hs", "platea": "$1550" , "palcoSur": "$1800" , "palcoNorte": "$1800" , "palcoLateralA": "$2300" , "palcoLateralB": "$2300"},
+    {"dia": "Domingo 18 (Finales)", "horaDeInicio": "13:00 hs", "platea": "$1800" , "palcoSur": "$2200" , "palcoNorte": "$2200" , "palcoLateralA": "$2700" , "palcoLateralB": "$2700"}
+]

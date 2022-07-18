@@ -433,8 +433,23 @@ table, th, td{
 }
 
 
+@media screen and (max-width: 1024px){   
+    
+
+    .nav-link{
+        width: 20px;
+    }
+
+}
+
+
+
 @media screen and (max-width: 768px){   
     
+
+    .nav-link{
+        width: 20px;
+    }
 
     .sponsors{
         height: 300px;
@@ -476,6 +491,21 @@ table, th, td{
         height: 60px;
     }
 
+    .labelIndex{
+        align-self: flex-start;
+        width: 450px;
+        margin-top: -46px;
+        padding-left: 250px;
+    }
+
+    .inputIndex{
+        justify-self: flex-end;
+        align-self: flex-start;
+        margin-left: -44px;
+        margin-top: -40px;
+        font-size: 15px;
+    }
+
 }
 
 @media screen and (max-width: 375px){
@@ -483,6 +513,16 @@ table, th, td{
     .logo img{
         height: 120px;
         width: 130px;
+        margin-top: 5px;
+        transform: scale(0.8,0.8);
+    }
+
+    .logo h1{
+        font-size: 25px;
+        justify-self: flex-end;
+        align-self: flex-start;
+        margin-left: 110px;
+        margin-top: -80px;
     }
 
     .footer{
@@ -577,7 +617,7 @@ table, th, td{
     .main__tickets table{
         height: 100px;
         width: 200px;
-        transform: scale(0.6,0.6) translate(-120px,0px);
+        transform: scale(0.6,0.6);
     }
 
     .tickets__titulo{
@@ -617,5 +657,27 @@ table, th, td{
     .main__contacto{
         width: 1250px;
         height: 900px;
-    }    
+    }
+
+    .labelIndex{
+        align-self: flex-start;
+        width: 450px;
+        margin-top: -19px;
+        padding-left: 0px;
+        padding-right: -50px;
+        margin-bottom: -20px;
+    }
+
+    .inputIndex{
+        justify-self: flex-end;
+        align-self: flex-start;
+        margin-left: 265px;
+        margin-top: -25px;
+        font-size: 15px;
+        width: 100px;
+    }
+    
+    .swal-modal {
+        transform: translate(-50px,0px) scale(0.7,0.7)
+    }
 }
